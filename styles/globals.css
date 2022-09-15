@@ -1,26 +1,62 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    body {
+        @apply font-body;
+    }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-* {
-  box-sizing: border-box;
-}
+@layer components {
+    .navLink {
+        @apply text-[#2E333B] text-[13px] font-bold uppercase tracking-wide hover:text-black hover:underline px-3 py-2 rounded-md text-sm;
+    }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+    .headerImg{
+        background-image: url("../public/images/header-home.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 95vh;
+        width: 95vw;
+        }
+
+    .approachImg{
+        background-image: url("../public/images/approach.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 95vh;
+        width: 95vw;
+    }
+
+    .missionImg{
+        background-image: url("../public/images/mission.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 95vh;
+        width: 95vw;
+    }
+
+    .ctaImg{
+        background-image: url("../public/images/cta.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 95vh;
+        width: 95vw;
+    }
+
+    .aboutImg{
+        background-image: url("../public/images/about.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 95vh;
+        width: 95vw;
+    }
 }
