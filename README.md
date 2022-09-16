@@ -6,7 +6,7 @@ I used Next Auth for Google authentication and enabled payment with Stripe API
 
 
 ### Live
-Check out the demo site [Vibrants Redesign](https://disney-clone-fullstack-next-js-tailwind-css.vercel.app/)
+Check out the demo site [Vibrants Redesign](https://e-commerce-vibrants-redesign.vercel.app/)
 
 
 
