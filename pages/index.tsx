@@ -6,7 +6,6 @@ import Header from "../components/Header/Header";
 import Slideshow from "../components/Slideshow/Slideshow";
 import Features from "../components/Features/Features";
 import {fetchProducts} from "../utils/functions/fetchProducts";
-import Product from "../components/Products/Product";
 import Approach from "../components/Approach/Approach";
 import Approved from "../components/Approved/Approved";
 import Mission from "../components/Mission/Mission";
@@ -16,10 +15,11 @@ import FeelBetter from "../components/Feel Better/FeelBetter";
 import Guarantee from "../components/Guarantee/Guarantee";
 import CallToAction from "../components/Call To Action/CallToAction";
 import Modal from "../components/Modal/Modal";
-import { Products } from '../types/typings'
+import {Product}  from '../types/typings'
+import ProductItem from "../components/Products/ProductItem";
 
 interface Props {
-    products: Products[];
+    products: Product[];
 }
 
 const Home = ({products} : Props ) => {
@@ -51,7 +51,7 @@ const Home = ({products} : Props ) => {
 
                   <div className='flex flex-wrap justify-center md:justify-start space-x-4 mx-auto'>
                       {products.map((product) => (
-                          <Product product={product} key={product._id} />
+                          <ProductItem product={product} key={product._id} />
                       ))}
                   </div>
               </div>

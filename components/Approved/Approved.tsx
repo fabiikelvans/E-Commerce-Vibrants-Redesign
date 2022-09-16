@@ -21,7 +21,7 @@ function Approved() {
                     <h1 className='text-2xl md:text-3xl mt-6'>“Treating the body with information is the future of medicine.”</h1>
                 </div>
                 <div className='mt-36'>
-                    <img src='/../images/beth.jpg' className='h-28 w-28 rounded-full'/>
+                    <img src='/../images/beth.jpg' alt='avatar' className='h-28 w-28 rounded-full'/>
                     <h2 className='font-bold text-md underline my-2' >Beth McDougall, M.D.</h2>
                     <p className='text-[12px] text-gray-400'>FOUNDER & MEDICAL DIRECTOR</p>
                     <p className='text-[12px] text-gray-400'>CLEAR CENTER OF HEALTH</p>

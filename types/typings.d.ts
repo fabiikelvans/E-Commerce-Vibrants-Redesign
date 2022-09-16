@@ -7,7 +7,7 @@ interface Image {
     };
 }
 
-export interface Products {
+interface Product {
     _id: string;
     _createdAt: string;
     _updatedAt: string;

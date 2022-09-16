@@ -11,6 +11,7 @@ import {GetServerSideProps} from "next";
 import {fetchLineItems} from "../utils/functions/fetchLineItems";
 import Confetti from 'react-confetti'
 import useWindowSize from 'react-use/lib/useWindowSize'
+import {StripeProduct} from "../types/typings";
 // import {useSession} from "next-auth/react";
 
 interface Props {
@@ -57,6 +58,7 @@ function Success({ products }: Props) {
                         <Image
                             src='/../logo.svg'
                             layout='fill'
+                            alt='logo'
                             objectFit='contain'
                         />
                     </div>
@@ -75,6 +77,7 @@ function Success({ products }: Props) {
                             <Image
                                 src='/../logo.svg'
                                 layout='fill'
+                                alt='logo'
                                 objectFit='contain'
                             />
 
@@ -164,6 +167,7 @@ function Success({ products }: Props) {
                                             rounded-md bg-gradient-to-tr from-blue-300 to-pink-300 border border-gray-300 bg-[#F1F1F1] text-xs text-white '>
                                                 <div className='relative h-7 w-7 animate-bounce rounded-md '>
                                                     <Image src="/../logo.svg"
+                                                           alt='logo'
                                                            layout='fill' objectFit='contain'/>
                                                 </div>
                                                 <div className='absolute -right-2 -top-2 flex h-5 w-5 items-center

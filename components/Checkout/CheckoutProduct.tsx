@@ -6,6 +6,7 @@ import Currency from 'react-currency-formatter';
 import {useDispatch} from "react-redux";
 import {removeFromBasket, addToBasket, removeAllFromBasket} from "../../redux/features/basketSlice";
 import toast from "react-hot-toast";
+import { Product } from '../../types/typings';
 
 
 interface Props {
@@ -54,6 +55,7 @@ function CheckoutProduct({ items, id } : Props) {
                 <Image
                     src={urlFor(items[0].image[0]).url()}
                     layout='fill'
+                    alt={items[0].title}
                     objectFit='cover'
                 />
             </div>

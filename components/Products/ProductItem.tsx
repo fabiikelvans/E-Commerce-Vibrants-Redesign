@@ -4,6 +4,7 @@ import Image from "next/image";
 import {urlFor} from "../../sanity";
 import Button from "../Button/Button";
 import {StarIcon} from "@heroicons/react/solid";
+import {Product} from "../../types/typings";
 
 // Redux
 import {modalOpen, toggleAffinityModal} from "../../redux/features/modalSlice";
@@ -15,7 +16,7 @@ interface Props {
     product: Product
 }
 
-function Product({ product } : Props) {
+function ProductItem({ product } : Props) {
 
     const dispatch = useDispatch();
 
@@ -41,6 +42,7 @@ function Product({ product } : Props) {
                     <Image
                         src={urlFor(product.image[0]).url()}
                         layout='fill'
+                        alt={product.title}
                         objectFit='contain' />
                 </div>
 
@@ -74,4 +76,4 @@ function Product({ product } : Props) {
     );
 }
 
-export default Product;
+export default ProductItem;

@@ -5,6 +5,7 @@ import {ArrowLeftIcon, LockClosedIcon, ShoppingBagIcon} from "@heroicons/react/o
 import Button from "../Button/Button";
 import Stripe from "stripe";
 import getStripe from "../../utils/functions/get-stripejs";
+import {Product} from "../../types/typings";
 
 // Redux
 import {selectBasketItems} from "../../redux/features/basketSlice";
@@ -27,13 +28,13 @@ const Modal = () => {
     // Items added to the cart
     const items = useSelector(selectBasketItems);
 
-    // Grouped Items
-    const [groupedItemsInBasket, setGroupedItemsInBasket] = useState(
-        {} as { [key: string] : Product[] }
-    );
 
     // Basket Total
     const basketTotal = useSelector(selectBasketTotal);
+
+    const [groupedItemsInBasket, setGroupedItemsInBasket] = useState(
+        {} as { [key: string] : Product[] }
+    );
 
     useEffect(() => {
         const groupedItems = items.reduce((results, item) => {
